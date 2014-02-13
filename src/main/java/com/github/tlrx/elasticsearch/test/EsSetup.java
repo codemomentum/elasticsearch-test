@@ -279,6 +279,7 @@ public class EsSetup {
      */
     public static DeleteIndices deleteAll() {
         return new DeleteIndices();
+
     }
 
     /**

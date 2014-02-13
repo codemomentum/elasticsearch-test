@@ -1,6 +1,9 @@
 package com.github.tlrx.elasticsearch.test;
 
 
+import org.elasticsearch.action.ActionFuture;
+import org.elasticsearch.action.admin.indices.status.IndicesStatusRequest;
+import org.elasticsearch.action.admin.indices.status.IndicesStatusResponse;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.transport.InetSocketTransportAddress;
@@ -121,6 +124,8 @@ public class EsSetupTest {
         assertFalse(esSetup.exists("catalog-2010"));
         assertFalse(esSetup.exists("catalog-2011"));
 
+
+        ActionFuture<IndicesStatusResponse> status = esSetup.client().admin().indices().status(new IndicesStatusRequest());
         // test deleteAll()
         esSetup.execute(deleteAll());
         assertFalse(esSetup.exists("catalog-2012"));
