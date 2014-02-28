@@ -1,0 +1,5 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Fri Feb 28 15:46:40 EET 2014
+elasticsearch-test-1.0.0.beta1.jar>=
+elasticsearch-test-1.0.0.beta1.pom>=
+elasticsearch-test-1.0.0.beta1-sources.jar>=
